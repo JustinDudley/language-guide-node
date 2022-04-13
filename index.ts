@@ -2,6 +2,8 @@ const http = require('http');
 const fs = require('fs');
 const url = require('url');
 
+import { Language } from './models/Language';
+
 const injectTemplate = require('./jd_modules/injectTemplate');
 
 const overviewHtml: String = fs.readFileSync(
@@ -10,9 +12,9 @@ const overviewHtml: String = fs.readFileSync(
 );
 const detailHtml: String = fs.readFileSync('./templates/detail.html', 'utf-8');
 const data = fs.readFileSync(`${__dirname}/data/languages.json`, 'utf-8');
-const languages = JSON.parse(data);
+const languages: Language[] = JSON.parse(data);
 
-const detailHtmlArray = languages.map((language: { name: any }) =>
+const detailHtmlArray = languages.map((language) =>
     injectTemplate(detailHtml, language.name),
 );
 const detailHtmlString = detailHtmlArray.join('');
