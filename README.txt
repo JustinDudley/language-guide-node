@@ -7,7 +7,10 @@ This project is modeled closely on that one.
 
 I will use typescript in this app
 
+Tip for adding emoji as favicon: https://dev.to/pickleat/add-an-emoji-favicon-to-your-site-co2
+
 To run:
 $ node index.ts
+runs on port 8080
 
 
