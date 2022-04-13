@@ -8,6 +8,6 @@ This project is modeled closely on that one.
 I will use typescript in this app
 
 To run:
-$ node index.this
+$ node index.ts
 
 
