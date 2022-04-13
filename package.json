@@ -1,0 +1,31 @@
+{
+  "name": "language-guide-node",
+  "version": "1.0.0",
+  "description": "This project is modeled closely on a Jason Schmedtmann Udemy course on Node. It is guide to choosing a first programming language, targeted at prospective software developers.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustinDudley/language-guide-node.git"
+  },
+  "keywords": [
+    "node",
+    "jason",
+    "schmedtmann",
+    "guide",
+    "code",
+    "coding",
+    "language",
+    "newbie",
+    "green",
+    "javascript"
+  ],
+  "author": "Justin Dudley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JustinDudley/language-guide-node/issues"
+  },
+  "homepage": "https://github.com/JustinDudley/language-guide-node#readme"
+}
