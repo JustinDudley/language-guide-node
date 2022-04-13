@@ -1,5 +1,6 @@
 const http = require('http');
 const fs = require('fs');
+const url = require('url');
 
 const injectTemplate = require('./jd_modules/injectTemplate');
 
@@ -24,8 +25,17 @@ const server = http.createServer(
             end: (arg0: string) => void;
         },
     ) => {
-        res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.end(overviewHtml.replace(/%DETAIL_STRING%/g, detailHtmlString));
+        const { pathname } = url.parse(req.url, true);
+
+        if (pathname === '/' || pathname === '/overview') {
+            res.writeHead(200, { 'Content-Type': 'text/html' });
+            res.end(overviewHtml.replace(/%DETAIL_STRING%/g, detailHtmlString));
+        } else if (pathname === '/detail') {
+            res.end('This is the detail page');
+        } else {
+            res.writeHead(404, { 'Content-Type': 'text/html' });
+            res.end('Page Not Found');
+        }
     },
 );
 
