@@ -5,24 +5,69 @@
         <style>
             body {
                 background-color: #a9a7ee;
+                padding: 40px 15px;
             }
-            div {
-                color: blue;
+            .container {
+                background-color: #eee;
+                padding: 20px;
+            }
+
+            .header {
+                display: flex;
+            }
+
+            .more-about {
+                margin-right: 30px;
+            }
+
+            .language-name {
+                font-size: 2rem;
+                font-weight: bold;
+                color: purple;
+                margin-right: 60px;
+            }
+
+            a {
+                background-color: #8fb9eb;
+                text-decoration: none;
+                font-size: 1.3rem;
+                padding: 8px;
+                text-align: center;
+                border: 1px solid black;
+            }
+
+            .origin {
+                background-color: #aaa;
+            }
+
+            .recs {
+                color: purple;
+                font-weight: bold;
             }
         </style>
     </head>
     <body>
-        <a href="/">BACK</a>
-        <div>
-            This is the detail page for %LANGUAGE_NAME%. Hopefully it is blue.
+        <div class="container">
+            <div class="header">
+                <p class="more-about">More about...</p>
+                <p class="language-name">%LANGUAGE_NAME%</p>
+                <a href="/">BACK </a>
+            </div>
+            <div class="origin">
+                <p>%LANGUAGE_YEAR%</p>
+                <p>%ORIGIN_STORY%</p>
+                <p>%HISTORY%</p>
+            </div>
+            <p>%LANGUAGE_USED_FOR%</p>
+            <p>%EXPLANATION%</p>
+            <p>
+                <span class="recs">Good first language? </span>
+                <span>%STARTER_LANGUAGE%</span>
+            </p>
+            <p>
+                <span class="recs">Recommendation: </span>
+                <span>%RECOMMENDATION%</span>
+            </p>
         </div>
-        <div>%LANGUAGE_NAME%</div>
-        <div>%LANGUAGE_YEAR%</div>
-        <div>%ORIGIN_STORY%</div>
-        <div>%HISTORY%</div>
-        <div>%LANGUAGE_USED_FOR%</div>
-        <div>%EXPLANATION%</div>
-        <div>%STARTER_LANGUAGE%</div>
-        <div>%RECOMMENDATION%</div>
     </body>
 </html>
