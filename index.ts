@@ -18,7 +18,7 @@ const data = fs.readFileSync(`${__dirname}/data/languages.json`, 'utf-8');
 const languages: Language[] = JSON.parse(data);
 
 const cardHtmlArray = languages.map((language) =>
-    injectTemplate(cardHtml, language.name, language.id),
+    injectTemplate(cardHtml, language),
 );
 const cardHtmlString = cardHtmlArray.join('');
 
@@ -37,13 +37,7 @@ const server = http.createServer(
             res.end(overviewHtml.replace(/%DETAIL_STRING%/g, cardHtmlString));
         } else if (pathname === '/detail') {
             res.writeHead(200, { 'Content-Type': 'text/html' });
-            res.end(
-                injectTemplate(
-                    detailHtml,
-                    languages[query.id].name,
-                    languages[query.id].id,
-                ),
-            );
+            res.end(injectTemplate(detailHtml, languages[query.id]));
         } else {
             res.writeHead(404, { 'Content-Type': 'text/html' });
             res.end('Page Not Found');
