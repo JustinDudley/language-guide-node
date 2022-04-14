@@ -11,13 +11,19 @@
         width: 20%;
     }
 
-    .detail-a {
+    .click-message {
         width: 40%;
     }
+
+    a {
+        text-decoration: none;
+    }
 </style>
-<div class="card">
-    <div class="box">%LANGUAGE_NAME%</div>
-    <div class="box">%LANGUAGE_YEAR%</div>
-    <div class="box">%LANGUAGE_USED_FOR%</div>
-    <a href="/detail?id=%LANGUAGE_ID%" class="detail-a">learn more</a>
-</div>
+<a href="/detail?id=%LANGUAGE_ID%">
+    <div class="card">
+        <div class="box">%LANGUAGE_NAME%</div>
+        <div class="box">%LANGUAGE_YEAR%</div>
+        <div class="box">%LANGUAGE_USED_FOR%</div>
+        <div class="click-message">click to learn more</div>
+    </div>
+</a>
