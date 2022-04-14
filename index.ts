@@ -10,14 +10,14 @@ const overviewHtml: String = fs.readFileSync(
     './templates/overview.html',
     'utf-8',
 );
-const detailHtml: String = fs.readFileSync('./templates/detail.html', 'utf-8');
+const cardHtml: String = fs.readFileSync('./templates/card.html', 'utf-8');
 const data = fs.readFileSync(`${__dirname}/data/languages.json`, 'utf-8');
 const languages: Language[] = JSON.parse(data);
 
-const detailHtmlArray = languages.map((language) =>
-    injectTemplate(detailHtml, language.name),
+const cardHtmlArray = languages.map((language) =>
+    injectTemplate(cardHtml, language.name),
 );
-const detailHtmlString = detailHtmlArray.join('');
+const cardHtmlString = cardHtmlArray.join('');
 
 const server = http.createServer(
     (
@@ -31,7 +31,7 @@ const server = http.createServer(
 
         if (pathname === '/' || pathname === '/overview') {
             res.writeHead(200, { 'Content-Type': 'text/html' });
-            res.end(overviewHtml.replace(/%DETAIL_STRING%/g, detailHtmlString));
+            res.end(overviewHtml.replace(/%DETAIL_STRING%/g, cardHtmlString));
         } else if (pathname === '/detail') {
             res.end('This is the detail page');
         } else {
