@@ -1,1 +1,7 @@
-[{ "name": "python" }, { "name": "java" }, { "name": "javascript" }]
+[
+    { "name": "java", "id": 0 },
+    { "name": "C#", "id": 1 },
+    { "name": "javascript", "id": 2 },
+    { "name": "C", "id": 3 },
+    { "name": "python", "id": 4 }
+]

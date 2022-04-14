@@ -1,9 +1,11 @@
+// typescript isn't picking up any of these types
 const http = require('http');
 const fs = require('fs');
 const url = require('url');
 
 import { Language } from './models/Language';
 
+// typescript isn't picking up this function's shape
 const injectTemplate = require('./jd_modules/injectTemplate');
 
 const overviewHtml: String = fs.readFileSync(
@@ -11,11 +13,12 @@ const overviewHtml: String = fs.readFileSync(
     'utf-8',
 );
 const cardHtml: String = fs.readFileSync('./templates/card.html', 'utf-8');
+const detailHtml: String = fs.readFileSync('./templates/detail.html', 'utf-8');
 const data = fs.readFileSync(`${__dirname}/data/languages.json`, 'utf-8');
 const languages: Language[] = JSON.parse(data);
 
 const cardHtmlArray = languages.map((language) =>
-    injectTemplate(cardHtml, language.name),
+    injectTemplate(cardHtml, language.name, language.id),
 );
 const cardHtmlString = cardHtmlArray.join('');
 
@@ -27,13 +30,20 @@ const server = http.createServer(
             end: (arg0: string) => void;
         },
     ) => {
-        const { pathname } = url.parse(req.url, true);
+        const { pathname, query } = url.parse(req.url, true);
 
         if (pathname === '/' || pathname === '/overview') {
             res.writeHead(200, { 'Content-Type': 'text/html' });
             res.end(overviewHtml.replace(/%DETAIL_STRING%/g, cardHtmlString));
         } else if (pathname === '/detail') {
-            res.end('This is the detail page');
+            res.writeHead(200, { 'Content-Type': 'text/html' });
+            res.end(
+                injectTemplate(
+                    detailHtml,
+                    languages[query.id].name,
+                    languages[query.id].id,
+                ),
+            );
         } else {
             res.writeHead(404, { 'Content-Type': 'text/html' });
             res.end('Page Not Found');
