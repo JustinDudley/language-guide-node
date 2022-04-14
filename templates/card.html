@@ -1,2 +1,23 @@
-<div style="color: red">This is the %LANGUAGE_NAME% card.</div>
-<a href="/detail?id=%LANGUAGE_ID%">click for more info</a>
+<style>
+    .card {
+        display: flex;
+        background-color: #eee;
+        color: black;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .box {
+        width: 20%;
+    }
+
+    .detail-a {
+        width: 40%;
+    }
+</style>
+<div class="card">
+    <div class="box">%LANGUAGE_NAME%</div>
+    <div class="box">%LANGUAGE_YEAR%</div>
+    <div class="box">%LANGUAGE_USED_FOR%</div>
+    <a href="/detail?id=%LANGUAGE_ID%" class="detail-a">learn more</a>
+</div>

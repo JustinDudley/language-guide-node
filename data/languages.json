@@ -1,7 +1,67 @@
 [
-    { "name": "java", "id": 0 },
-    { "name": "C#", "id": 1 },
-    { "name": "javascript", "id": 2 },
-    { "name": "C", "id": 3 },
-    { "name": "python", "id": 4 }
+    {
+        "name": "java",
+        "id": 0,
+        "origin": {
+            "year": "",
+            "originStory": "",
+            "history": ""
+        },
+        "usedFor": "",
+        "explanation": "",
+        "starterLanguage": "",
+        "recommendation": ""
+    },
+    {
+        "name": "C#",
+        "id": 1,
+        "origin": {
+            "year": "",
+            "originStory": "",
+            "history": ""
+        },
+        "usedFor": "",
+        "explanation": "",
+        "starterLanguage": "",
+        "recommendation": ""
+    },
+    {
+        "name": "javascript",
+        "id": 2,
+        "origin": {
+            "year": "",
+            "originStory": "",
+            "history": ""
+        },
+        "usedFor": "",
+        "explanation": "",
+        "starterLanguage": "",
+        "recommendation": ""
+    },
+    {
+        "name": "C",
+        "id": 3,
+        "origin": {
+            "year": "1973",
+            "originStory": "Developed by Dennis Ritchie of Bell Labs",
+            "history": "Bell Labs by Dennis Ritchie between 1972 and 1973, plus give some more detail"
+        },
+        "usedFor": "This is a foundational language",
+        "explanation": "This is a long explanation of the C programming language, here we go... ",
+        "starterLanguage": "No",
+        "recommendation": "Don't learn this at first"
+    },
+    {
+        "name": "python",
+        "id": 4,
+        "origin": {
+            "year": "",
+            "originStory": "",
+            "history": ""
+        },
+        "usedFor": "",
+        "explanation": "",
+        "starterLanguage": "",
+        "recommendation": ""
+    }
 ]
