@@ -20,7 +20,6 @@
             }
 
             .welcome-box {
-                background-color: #eee;
                 padding: 20px;
                 margin-bottom: 40px;
             }
@@ -35,6 +34,21 @@
 
             .explanation {
                 color: brown;
+            }
+
+            ul {
+                list-style-type: none;
+            }
+
+            ul li:before {
+                content: '';
+                display: inline-block;
+                height: 10px;
+                width: 10px;
+                background-size: 10px;
+                background-image: url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/samsung/320/laptop_1f4bb.png');
+                background-repeat: no-repeat;
+                margin-right: 5px;
             }
         </style>
     </head>
@@ -58,6 +72,25 @@
                 four good options. This is a good thing! Your job at the
                 beginning is simple.
             </p>
+            <ul class="explanation">
+                Here are some things this site WON'T tell you:
+                <li>
+                    Salaries associated with a language. Junior developers make
+                    a similar salary regardless of language. After you've spent
+                    a few years in the industry, you'll be able to target
+                    certain positions, salary ranges, and languages.
+                </li>
+                <li>
+                    Percentages of software developers using a given language.
+                    This information can be useful, but it is also misleading to
+                    junior developers, since certain languages are used
+                    primarily by senior devs. (Skew effect)
+                </li>
+                <li>
+                    25 fascinating programming languages, none of which are a
+                    common entry point into the industry.
+                </li>
+            </ul>
             <p class="explanation">
                 Also, I should note that any language you choose will lead you
                 in a good direction. All languages share certain features, such
