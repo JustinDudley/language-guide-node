@@ -8,18 +8,14 @@ import { Language } from './models/Language';
 // typescript isn't picking up this function's shape
 const injectTemplate = require('./jd_modules/injectTemplate');
 
-const overviewHtml: String = fs.readFileSync(
-    './templates/overview.html',
-    'utf-8',
-);
-const cardHtml: String = fs.readFileSync('./templates/card.html', 'utf-8');
-const detailHtml: String = fs.readFileSync('./templates/detail.html', 'utf-8');
+const overviewHtml: String = fs.readFileSync('./templates/overview.html', 'utf-8');
+const cardHtml: string = fs.readFileSync('./templates/card.html', 'utf-8');
+const detailHtml: string = fs.readFileSync('./templates/detail.html', 'utf-8');
+const learningPathsHtml: string = fs.readFileSync('./templates/learning-paths.html', 'utf-8');
 const data = fs.readFileSync(`${__dirname}/data/languages.json`, 'utf-8');
 const languages: Language[] = JSON.parse(data);
 
-const cardHtmlArray = languages.map((language) =>
-    injectTemplate(cardHtml, language),
-);
+const cardHtmlArray = languages.map((language) => injectTemplate(cardHtml, language));
 const cardHtmlString = cardHtmlArray.join('');
 
 const server = http.createServer(
@@ -38,6 +34,9 @@ const server = http.createServer(
         } else if (pathname === '/detail') {
             res.writeHead(200, { 'Content-Type': 'text/html' });
             res.end(injectTemplate(detailHtml, languages[query.id]));
+        } else if (pathname === '/learning-paths') {
+            res.writeHead(200, { 'Content-Type': 'text/html' });
+            res.end(learningPathsHtml);
         } else {
             res.writeHead(404, { 'Content-Type': 'text/html' });
             res.end('Page Not Found');
