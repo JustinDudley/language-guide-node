@@ -6,6 +6,7 @@ export interface Language {
     explanation: String;
     starterLanguage: String;
     recommendation: String;
+    emoji: String;
 }
 
 interface Origin {

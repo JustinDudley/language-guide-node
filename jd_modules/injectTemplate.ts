@@ -35,6 +35,7 @@ const injectTemplate = (template: String, language: Language) => {
         /%RECOMMENDATION%/g,
         `${language.recommendation}`,
     );
+    localTemplate = localTemplate.replace(/%EMOJI%/g, `${language.emoji}`);
 
     return localTemplate;
 };
