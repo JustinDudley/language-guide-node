@@ -14,17 +14,25 @@
 
             .header {
                 display: flex;
+                align-items: center;
+                justify-content: space-between;
             }
 
             .more-about {
-                margin-right: 30px;
+                margin-right: 25px;
+                font-size: 2rem;
             }
 
             .language-name {
-                font-size: 2rem;
+                font-size: 3rem;
                 font-weight: bold;
                 color: purple;
-                margin-right: 60px;
+            }
+
+            .home {
+                padding: 10px 15px;
+                margin: 0 15px;
+                align-items: flex-start;
             }
 
             a {
@@ -49,9 +57,13 @@
     <body>
         <div class="container">
             <div class="header">
-                <p class="more-about">More about...</p>
-                <p class="language-name">%LANGUAGE_NAME%</p>
-                <a href="/">BACK </a>
+                <div>
+                    <span class="more-about">More about...</span>
+                    <span class="language-name">%LANGUAGE_NAME%</span>
+                </div>
+                <div>
+                    <a href="/" class="home">HOME </a>
+                </div>
             </div>
             <div class="origin">
                 <p>%LANGUAGE_YEAR%</p>
