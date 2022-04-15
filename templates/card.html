@@ -3,17 +3,19 @@
         display: flex;
         align-items: center;
         background-color: #e4e4e4;
-        border-radius: 3px;
+        border: 2px solid #d8d8d8;
+        border-radius: 9px;
         color: black;
-        padding: 10px 20px;
+        padding: 5px 30px;
         margin-bottom: 18px;
         transition: transform 0.4s, background-color 0.5s, border 0.3s;
+        filter: drop-shadow(18px 8px 4px #4444dd);
     }
 
     .card:hover {
         transform: scaleX(1.02) scaleY(1.15);
         background-color: #eaeaea;
-        border: 1.5px solid purple;
+        border: 1.5px solid #4444dd;
     }
 
     .card:hover .name {
@@ -26,14 +28,9 @@
     }
 
     .name {
-        width: 15%;
+        width: 20%;
         font-size: 1.4rem;
         transition: all 0.2s;
-    }
-
-    .emoji {
-        font-size: 1.5rem;
-        width: 15%;
     }
 
     .used-for {
@@ -41,12 +38,12 @@
     }
 
     .year {
-        width: 15%;
+        width: 20%;
     }
 
-    .click-message {
-        width: 15%;
-        color: #666;
+    .emoji {
+        font-size: 2.3rem;
+        width: 20%;
     }
 
     a {
@@ -56,9 +53,8 @@
 <a href="/detail?id=%LANGUAGE_ID%">
     <div class="card">
         <div class="name">%LANGUAGE_NAME%</div>
-        <div class="emoji">%EMOJI%</div>
         <div class="used-for">%LANGUAGE_USED_FOR%</div>
         <div class="year">%LANGUAGE_YEAR%</div>
-        <div class="click-message">click for more</div>
+        <div class="emoji">%EMOJI%</div>
     </div>
 </a>
