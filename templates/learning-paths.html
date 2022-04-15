@@ -43,6 +43,30 @@
                 background-color: #7474fd;
                 color: black;
             }
+
+            .my-story {
+                margin-bottom: 0.5em;
+            }
+
+            .indent {
+                margin: 0 0 30px 40px;
+            }
+
+            ul {
+                list-style-type: none;
+                margin-top: 0.5em;
+            }
+
+            ul li:before {
+                content: '';
+                display: inline-block;
+                height: 10px;
+                width: 10px;
+                background-size: 10px;
+                background-image: url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/samsung/320/laptop_1f4bb.png');
+                background-repeat: no-repeat;
+                margin-right: 5px;
+            }
         </style>
     </head>
     <body>
@@ -53,22 +77,39 @@
                 </div>
                 <a href="/">HOME </a>
             </div>
-            <p>Some text goes here</p>
-            <p>
-                -- Also, I should include a section that gives tips on HOW to learn: Try
-                codeacademy first because it is a zero-entry environment. Then quickly switch
-                to a tutorial that requires you to install some things and work in your own
-                environment. Always use a tutorial that is recent (less than a year old), since
-                anything older will have pieces that you have to problem-solve, and that may be
-                beyond your capability at the beginning. Don't be afraid to spend $18 on a
-                tutorial. Free stuff is great, but a money-course has a better chance of being
-                up-to-date and really high-quality. (My current favorit is Udemy, but you will
-                find your own path). I COULD tell them MY path: Online tutorials, a 6-month
-                part-time online bootcamp while I was still in my former career, then a full-on
-                3-month bootcamp, then a LOT of learning on-the-job after I landed my first
-                job.
+            <p class="my-story">My story:</p>
+            <p class="indent">
+                It took me about one year to learn enough to get hired. I started with a bunch
+                of random python tutorials, then did a 6-month part-time online bootcamp
+                learning python and java, all while still working another full-time job.
+                Finally I bit the bullet and did a 3-month in-person bootcamp, learning C#,
+                javascript, and Angular.
             </p>
-            <p>Thank you and goodnight</p>
+            <span>My advice:</span>
+            <ul>
+                <li>
+                    You can start with zero-depth-entry tutorials like codacademy which
+                    spoon-feed you coding syntax without your having to install anything on
+                    your laptop.
+                </li>
+                <li>
+                    Pretty soon you'll want to learn how to code on your own, and you'll begin
+                    to learn how to set up your own machine to do that.
+                </li>
+                <li>
+                    Especially at the beginning, always use tutorials that are recent. Anything
+                    more than a year old is bound to have information that is out of date.
+                    There are work-arounds for those situations, but when you are starting out,
+                    it is very difficult to problem-solve those. Don't be afraid to spend $18
+                    on a tutorial.
+                </li>
+                <li>
+                    Free stuff is great, especially at the very beginning, but don't be afraid
+                    to drop $18 on a course here and there. When you pay money, you are more
+                    likly to get material that is (1) high-quality and (2) up-to-date.
+                </li>
+            </ul>
+            <p></p>
         </div>
     </body>
 </html>
