@@ -1,21 +1,38 @@
 <style>
     .card {
         display: flex;
+        align-items: center;
         background-color: #e4e4e4;
+        border-radius: 3px;
         color: black;
-        padding: 20px;
+        padding: 10px 20px;
         margin-bottom: 18px;
-        transition: transform 0.4s, background-color 0.4s, border 0.3s;
+        transition: transform 0.4s, background-color 0.5s, border 0.3s;
     }
 
     .card:hover {
         transform: scaleX(1.02) scaleY(1.15);
         background-color: #eaeaea;
-        border: 1.5px solid brown;
+        border: 1.5px solid purple;
+    }
+
+    .card:hover .name {
+        font-size: 1.5rem;
+        color: purple;
     }
 
     .box {
         width: 15%;
+    }
+
+    .name {
+        width: 15%;
+        font-size: 1.4rem;
+        transition: all 0.2s;
+    }
+
+    .emoji {
+        font-size: 1.5rem;
     }
 
     .click-message {
@@ -28,10 +45,10 @@
 </style>
 <a href="/detail?id=%LANGUAGE_ID%">
     <div class="card">
-        <div class="box">%LANGUAGE_NAME%</div>
+        <div class="name">%LANGUAGE_NAME%</div>
         <div class="box">%LANGUAGE_YEAR%</div>
         <div class="box">%LANGUAGE_USED_FOR%</div>
-        <div class="box">%EMOJI%</div>
+        <div class="emoji">%EMOJI%</div>
         <div class="click-message">click to learn more</div>
     </div>
 </a>

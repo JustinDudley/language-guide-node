@@ -3,7 +3,7 @@
         "name": "Java",
         "id": 0,
         "origin": {
-            "year": "",
+            "year": "1996",
             "originStory": "",
             "history": ""
         },
@@ -11,13 +11,13 @@
         "explanation": "Java is the 1/2 pound, fatty hamburger of programming languages. It's about as old as JavaScript and Python, but feels older. If you want to really understand what you're doing, and like everything put carefully in neat boxes, and don't want to cut any corners, Java is for you. Being an OOP language, it is a harder start than Python or JavaScript, but it's a good, in-demand language. Java has a dual role as a backend language and as the language of Android phones. -- Should mention Kotlin",
         "starterLanguage": "",
         "recommendation": "Yes",
-        "emoji": "🍔 🙂"
+        "emoji": "🙂 🍔"
     },
     {
         "name": "C#",
         "id": 1,
         "origin": {
-            "year": "",
+            "year": "2000",
             "originStory": "",
             "history": ""
         },
@@ -25,13 +25,13 @@
         "explanation": "",
         "starterLanguage": "",
         "recommendation": "Probably",
-        "emoji": "🥪 🙂"
+        "emoji": "🙂 🥪"
     },
     {
         "name": "JavaScript",
         "id": 2,
         "origin": {
-            "year": "",
+            "year": "1995",
             "originStory": "",
             "history": ""
         },
@@ -39,7 +39,7 @@
         "explanation": "Who am I kidding? Of COURSE JavaScript is the best choice for you! ...If you're not sure which direction to go, and you really want a job, this is the obvious choice. It has been a popular language for decades for frontend web development, and with the advent of NodeJS it is becoming a popular backend language as well. JavaScript is relatively easy to learn. In order to be employable, you will need to learn CSS and HTML along with it, AND you will eventually need to learn a framework for JavaScript, such as React or Angular, since no one build websites with vanilla JavaScript anymore. But you can get started by just learning JavaScript. It is a good language to learn, and you won't have missed out on anything if you later switch to another language.",
         "starterLanguage": "",
         "recommendation": "Yes!",
-        "emoji": "💵 😃"
+        "emoji": "😃 💵"
     },
     {
         "name": "C",
@@ -53,13 +53,13 @@
         "explanation": "This is a long explanation of the C programming language, here we go... ",
         "starterLanguage": "No",
         "recommendation": "Don't learn this as your first language",
-        "emoji": "🚢 😭"
+        "emoji": "😭 🏛"
     },
     {
         "name": "Python",
         "id": 4,
         "origin": {
-            "year": "",
+            "year": "1991",
             "originStory": "",
             "history": ""
         },
@@ -67,6 +67,6 @@
         "explanation": "Python might be my favorite language. So zippy! Such clear syntax! It's also in demand for people in machine language and other data-heavy fields. But here's the problem with Python: It's not a great language for getting your first job. Oddly enough, it is used by beginners and also by scientists and senior devs, but not so much by first-year developers.  It's easy syntax and computational power make it appealing for people already in the scientists who need a powerful tool. But it may not be a great choice for getting your first job as an in-the-trenches developer.",
         "starterLanguage": "",
         "recommendation": "Yes and No",
-        "emoji": "🏇🏼 🤨"
+        "emoji": "🤨 🏇🏼"
     }
 ]

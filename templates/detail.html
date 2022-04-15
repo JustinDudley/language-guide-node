@@ -2,6 +2,10 @@
 <html lang="en-us">
     <head>
         <title>%LANGUAGE_NAME% page</title>
+        <link
+            rel="icon"
+            href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/google/313/chequered-flag_1f3c1.png"
+        />
         <style>
             body {
                 background-color: #a9a7ee;
@@ -29,19 +33,18 @@
                 color: purple;
             }
 
-            .home {
-                padding: 10px 15px;
-                margin: 0 15px;
-                align-items: flex-start;
-            }
-
             a {
                 background-color: #8fb9eb;
                 text-decoration: none;
                 font-size: 1.3rem;
-                padding: 8px;
-                text-align: center;
                 border: 1px solid black;
+                padding: 10px 15px;
+                margin: 0 15px;
+                transition: all 0.2s;
+            }
+
+            a:hover {
+                background-color: lightblue;
             }
 
             .origin {
@@ -61,9 +64,7 @@
                     <span class="more-about">More about...</span>
                     <span class="language-name">%LANGUAGE_NAME%</span>
                 </div>
-                <div>
-                    <a href="/" class="home">HOME </a>
-                </div>
+                <a href="/">HOME </a>
             </div>
             <div class="origin">
                 <p>%LANGUAGE_YEAR%</p>
